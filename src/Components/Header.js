@@ -3,8 +3,6 @@ import shelfieIcon from '../assets/shelfie_icon.png'
 import { HashRouter as Router, Link} from 'react-router-dom'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
 
-import Dashboard from '../Dashboard'
-import Form from '../Form'
 
 export class Header extends Component {
     constructor(props) {
@@ -35,10 +33,10 @@ export class Header extends Component {
             <Collapse isOpen={!this.state.collapsed} navbar>
                 <Nav navbar className="flex-row justify-content-around">
                 <NavItem>
-                    <Link className='navLink' to="/">Dashboard</Link>
+                    <Link to="/" className='navLink' >Dashboard</Link>
                 </NavItem>
                 <NavItem>
-                    <Link className='navLink' to="/form">Add Inventory</Link>
+                    <Link to="/form" className='navLink' >Add Products</Link>
                 </NavItem>
                 </Nav>
             </Collapse>

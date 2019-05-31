@@ -1,8 +1,5 @@
 import React from 'react';
 
-import { HashRouter as Router, Link} from 'react-router-dom'
-import routes from './routes'
-
 import Header from './Components/Header'
 import Dashboard from './Dashboard'
 import Form from './Form'
