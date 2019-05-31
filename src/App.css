@@ -2,32 +2,53 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Header Component */
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+}
+
+.header {
+  background-color:#AB2A19;
+}
+
+.navItem {
+  display: flex;
+}
+
+.navLink {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+
+/* App Component */
+
+.App-container {
+  display: flex;
+  width: 90vw;
+}
+
+/* Dashboard Component */
+
+.dashboard-container {
+  display: flex;
+}
+
+/* DisplayProducts Component */
+
+.display-container {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 90%;
+  background: #D34735;
 }
 
-.App-link {
-  color: #61dafb;
+.product-display-item {
+  color:blue
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.aboutProduct {
+  color: green;
 }
