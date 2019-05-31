@@ -27,6 +27,8 @@
 
 .App-container {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 90vw;
 }
 
@@ -39,16 +41,43 @@
 /* DisplayProducts Component */
 
 .display-container {
-  display: flex;
-  align-items: center;
-  width: 90%;
+  width: 40vw;
   background: #D34735;
+  
 }
 
 .product-display-item {
-  color:blue
+  display: flex;
+  margin: 2rem auto;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.product-display-item img {
+  width: 18vw;
+  height: 20vh;
 }
 
 .aboutProduct {
-  color: green;
+  display: flex;
+  margin: 0 auto;
+}
+
+.display-buttons {
+  display: flex;
+  align-self: flex-end;
+}
+
+.display-buttons:first-child {
+  
+}
+
+/* Form Component */
+.form-container {
+  display: flex column;
+}
+
+.formImg {
+  height: 450px;
+  width: 300px;
 }

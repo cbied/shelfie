@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import shelfieIcon from '../assets/shelfie_icon.png'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { HashRouter as Router, Link} from 'react-router-dom'
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
+
+import Dashboard from '../Dashboard'
+import Form from '../Form'
 
 export class Header extends Component {
     constructor(props) {
@@ -21,6 +25,7 @@ export class Header extends Component {
     render() {
         return (
         <nav>
+            <Router>
             <Navbar className="header" light>
             <NavbarBrand href="/" className="d-flex align-items-center">
                 <img className="mr-4" src={shelfieIcon} alt="shelfie logo"/>
@@ -30,14 +35,15 @@ export class Header extends Component {
             <Collapse isOpen={!this.state.collapsed} navbar>
                 <Nav navbar className="flex-row justify-content-around">
                 <NavItem>
-                    <NavLink className='navLink' href="/components/">Dashboard</NavLink>
+                    <Link className='navLink' to="/">Dashboard</Link>
                 </NavItem>
                 <NavItem>
-                    <NavLink className='navLink' href="https://github.com/reactstrap/reactstrap">Add Inventory</NavLink>
+                    <Link className='navLink' to="/form">Add Inventory</Link>
                 </NavItem>
                 </Nav>
             </Collapse>
             </Navbar>
+            </Router>
         </nav>
         )
     }

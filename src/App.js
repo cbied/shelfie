@@ -44,18 +44,18 @@ class App extends React.Component {
         <div className="App-container">
 
           <div className="col-left">
-            <Dashboard 
-            editPostFn={this.editPost}
-            didMountFn={this.componentDidMount}
-            products={products}
+            <Form 
+              currentProduct={currentProduct}
+              didMountFn={this.componentDidMount}
             />
           </div>
 
           <div className="col-right">
-            <Form 
-            currentProduct={currentProduct}
-            didMountFn={this.componentDidMount}
-            />
+            <Dashboard 
+              editPostFn={this.editPost}
+              didMountFn={this.componentDidMount}
+              products={products}
+              />
           </div>
 
         </div>

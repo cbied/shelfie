@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 import { Button } from 'reactstrap';
 
 const DisplayProducts = (props) => {
@@ -9,15 +10,25 @@ const DisplayProducts = (props) => {
                 <img src={product.image_url} alt="product image"/>
                 <div className="aboutProduct">
                     <h2>{product.name}</h2>
-                    <h3>{product.price}</h3>
+                    <h3>${product.price}</h3>
                 </div>
-                <div className="buttons">
-                    <Button color="danger" id={product.product_id}>Delete</Button>
+                <div className="display-buttons">
+                    <Button color="danger" id={product.product_id}
+                    onClick={() => {
+                        axios
+                        .delete(`products/${product.product_id}`)
+                        .then(() => {
+                            props.deleteFn()
+                            props.didMountFn()
+                        })}}
+                    >Delete</Button>
                     <Button color="warning"
-                    onClick={() => props.editItem(product)}
+                    onClick={() => props.editPostFn(product)}
                     >Edit</Button>
                 </div>
+                
             </div>
+            
         )
     })
         return (

@@ -5,8 +5,8 @@ import DisplayProducts from './Components/DisplayProducts';
 const Dashboard = (props) => {
 
     const deleteProduct = (e) => {
+        
         let id = e.target.id;
-
         axios
             .delete(`/products${id}`)
             .then(response => console.log(`need to update ${response}`))
