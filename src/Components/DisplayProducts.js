@@ -18,7 +18,7 @@ const DisplayProducts = (props) => {
                         axios
                         .delete(`products/${product.product_id}`)
                         .then(() => {
-                            props.deleteFn()
+                            // props.deleteFn()
                             props.didMountFn()
                         })}}
                     >Delete</Button>

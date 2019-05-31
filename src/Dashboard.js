@@ -4,21 +4,22 @@ import DisplayProducts from './Components/DisplayProducts';
 
 const Dashboard = (props) => {
 
-    const deleteProduct = (e) => {
+    // const deleteProduct = (e) => {
         
-        let id = e.target.id;
-        axios
-            .delete(`/products${id}`)
-            .then(response => console.log(`need to update ${response}`))
-            .catch(error => console.log(error))
+    //     let id = e.target.id;
+    //     axios
+    //         .delete(`/products${id}`)
+    //         .then(response => console.log(`need to update ${response}`))
+    //         .catch(error => console.log(error))
 
-            props.didMountFn()
-    }
+    //         props.didMountFn()
+    // }
         return (
             <div className='dashboard-container'>
                 <DisplayProducts 
+                didMountFn={props.didMountFn}
                 editItem={props.editItem} 
-                deleteFn={deleteProduct} 
+                // deleteFn={deleteProduct} 
                 products={props.products}
                 />
                 {/* Product display Component
